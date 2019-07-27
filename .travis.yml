@@ -9,13 +9,3 @@ before_install:
 
 scripts:
   - docker run -e CI=true troy/docker_react npm run test
-
-deploy:
-  provider: elasticbeanstalk
-  region: "us-east-1"
-  app: "docker-react"
-  env: "DockerReact-env"
-  bucket_name: "elasticbeanstalk-us-east-1-475987840838"
-  bucker_path: "docker-react"
-  on:
-    branch: master
