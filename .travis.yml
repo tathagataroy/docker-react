@@ -4,6 +4,7 @@ services:
   - docker
 
 before_install:
+  - nvm install 8.11.4
   - nvm use 8.11.4
   - docker build -t troy/docker_react -f Dockerfile.dev .
 
