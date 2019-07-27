@@ -4,6 +4,7 @@ services:
   - docker
 
 before_install:
+  - npm i -g npm@6.9.0
   - docker build -t troy/docker_react -f Dockerfile.dev .
 
 scripts:
