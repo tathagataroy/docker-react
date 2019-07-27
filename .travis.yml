@@ -1,9 +1,9 @@
 sudo: required
+language: node_js
 services:
   - docker
 
 before_install:
-  - gem install bundler
   - docker build -t troy/docker_react -f Dockerfile.dev .
 
 scripts:
