@@ -4,8 +4,11 @@ services:
   - docker
 
 before_install:
-  - npm i -g npm@6.9.0
+  - npm i -g npm@5.6.0
   - docker build -t troy/docker_react -f Dockerfile.dev .
 
 scripts:
   - docker run -e CI=true troy/docker_react npm run test
+
+deploy:
+  provider: elasticbeanstalk
